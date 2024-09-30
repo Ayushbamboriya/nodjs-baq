@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 const sendMail = async (toEmail) => {
     const mailOptions = {
         from: {
-            name: 'Ayush Mail',
+            name: 'BAQ',
             address: process.env.GMAIL_USER,
         },
         to: toEmail, // Use the dynamic email address from the request
