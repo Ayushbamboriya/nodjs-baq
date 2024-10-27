@@ -11,9 +11,12 @@ app.use(express.json()); // For parsing application/json
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 698136a (new changes today)
 
 
 // Serve your HTML file on the root path
