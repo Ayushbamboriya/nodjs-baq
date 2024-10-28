@@ -140,6 +140,17 @@ p {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0.5vw 1vw rgba(248, 248, 248, 0.2);
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight color on mobile */
+}
+
+.social-icons a:focus,
+.social-icons a:active {
+  outline: none;
+  border: none;
+  box-shadow: none; /* Removes any additional shadow */
+  -webkit-box-shadow: none; /* For Safari */
 }
 
 .social-icons a:hover {
@@ -314,6 +325,7 @@ p {
 
   .social-icons a {
     font-size: 4vh;
+    padding:2.1vw 1vh;
   }
 
   .get-in-touch i {
@@ -333,7 +345,7 @@ p {
   .get-in-touch {
     bottom: 2vh;
     right: 2vw;
-    padding: -0.5vh 5vw;
+    padding: 0.2vh 4vw;
     border-radius: 8.5vw;
   }
 }
@@ -442,7 +454,7 @@ p {
 
   h1 {
     font-size: 1.6em;
-    padding-top: 13vh;
+    padding-top: 6vh;
   }
 
   p {
@@ -535,7 +547,7 @@ p {
 
   h1 {
     font-size: 1.7em;
-    padding-top: 15vh;
+    padding-top: 6vh;
   }
 
   p {
