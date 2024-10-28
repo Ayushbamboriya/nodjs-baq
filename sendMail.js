@@ -1,11 +1,11 @@
-const nodemailer = require("nodemailer");
-require("dotenv").config();
-
+const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.your_email_provider.com', // e.g., Hostinger's SMTP server
+    port: 465, // or 587 for TLS/STARTTLS
+    secure: true, // true for 465, false for other ports
     auth: {
-        user: process.env.GMAIL_USER, // Sender Gmail address
-        pass: process.env.GMAIL_PASS, // App password from Gmail account
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
 
@@ -13,19 +13,19 @@ const sendMail = async (toEmail) => {
     const mailOptions = {
         from: {
             name: 'BAQ',
-            address: process.env.GMAIL_USER,
+            address: process.env.EMAIL_USER,
         },
-        to: toEmail, // Use the dynamic email address from the request
+        to: toEmail,
         subject: "New user from landing page",
-        text: `landing page: ${toEmail}`, // plain text body
-        html: `<b>Landing page: ${toEmail}</b>`, // html body
+        text: `landing page: ${toEmail}`,
+        html: `<b>Landing page: ${toEmail}</b>`,
     };
 
     try {
         await transporter.sendMail(mailOptions);
         console.log('Email has been sent!');
     } catch (error) {
-        console.error(error);
+        console.error('Error sending email:', error);
     }
 };
 

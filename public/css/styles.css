@@ -359,9 +359,9 @@ p {
 
 .content {
   max-width: 66vw;
-  margin-top: 10vh;
-  margin-left: 4vw;
-  font-size: 96%
+        margin-top: 3vh;
+        margin-left: 4vw;
+        font-size: 96%;
 }
 
 .notify-me input,
@@ -394,18 +394,18 @@ p {
 }
 
 .round-image1 {
-  margin-top: 62vh;
-  margin-left: 49vw;
+  margin-top: 52vh;
+  margin-left: 64vw;
 }
 
 .round-image2 {
   margin-top: 65vh;
-  margin-left: 28vw;
+        margin-left: 62vw;
 }
 
 .round-image3 {
-  margin-top: 68vh;
-  margin-left: 35vw;
+  margin-top: 58vh;
+        margin-left: 50vw;
 }
 
 .social-icons a {
