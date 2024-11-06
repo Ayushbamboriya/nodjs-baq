@@ -13,6 +13,11 @@ app.use(express.json());
 // Serve static files from the 'public' folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Redirect root URL to the main HTML page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Replace 'index.html' with the name of your main HTML file
+});
+
 // Email sending route
 app.post('/send-email', async (req, res) => {
     const { email } = req.body;
@@ -23,6 +28,7 @@ app.post('/send-email', async (req, res) => {
         res.status(500).send('Error sending email: ' + error.message);
     }
 });
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
