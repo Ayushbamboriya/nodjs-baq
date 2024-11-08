@@ -182,6 +182,12 @@ p {
   margin-right: 1vw;
 }
 
+.get-in-touch-new{
+  height: 10%;
+    width: 25%;
+    position: static;
+}
+
 /* Error and Success Messages */
 .error-message {
   color: red;
@@ -619,7 +625,7 @@ p {
   .get-in-touch a {
     color: white;
     text-decoration: none;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     display: flex;
     align-items: center;
   }
@@ -714,12 +720,13 @@ p {
     font-size: 2vw;
     display: flex;
     align-items: center;
+    width: 116%;
   }
 
   .get-in-touch {
     bottom: 2vh;
     right: 2vw;
-    padding: -0.5vh 5vw;
+    padding: 0.5vh 5vw;
     border-radius: 8.5vw;
   }
 }
